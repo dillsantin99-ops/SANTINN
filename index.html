@@ -66,12 +66,14 @@
   .nav{display:flex;align-items:center;justify-content:space-between;height:76px;gap:20px}
   .brand{flex:none}
   .brand img{height:42px;width:auto}
-  .menu{display:flex;gap:20px;list-style:none}
+  .menu{display:flex;gap:22px;list-style:none}
   .menu a{text-decoration:none;color:var(--azul);font-size:14.5px;white-space:nowrap;font-weight:600;transition:color .2s}
   .menu a:hover{color:var(--laranja)}
   .nav .btn{min-height:44px;padding:0 20px;font-size:15px;white-space:nowrap;flex:none}
   .burger{display:none;background:none;border:0;color:var(--azul);width:44px;height:44px;cursor:pointer}
-  @media (max-width:1240px){
+  /* telas médias: menu completo, botão do topo sai (WhatsApp flutuante continua) */
+  @media (max-width:1320px){ .nav .btn{display:none} .menu{gap:18px} .menu a{font-size:14px} }
+  @media (max-width:980px){
     .menu{display:none;position:absolute;top:76px;left:0;right:0;flex-direction:column;gap:0;background:#fff;padding:6px 20px 18px;border-bottom:1px solid #E6ECEE;box-shadow:0 20px 30px -20px rgba(0,0,0,.2)}
     .menu.open{display:flex}
     .menu a{display:block;padding:14px 0;border-bottom:1px solid #EEF2F3}
