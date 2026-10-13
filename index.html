@@ -6,7 +6,11 @@
 <title>Santin Automação e Tecnologia | Automação, CLP e NR-12</title>
 <meta name="description" content="Santin Automação e Tecnologia: projetos de automação, programação de CLP, projeto, montagem e instalação de NR-12, automação e controle, venda de equipamentos e máquinas, manutenção elétrica e mecânica.">
 <meta name="theme-color" content="#365A68">
-<link rel="icon" type="image/svg+xml" href="assets/simbolo.svg">
+<link rel="icon" type="image/png" href="assets/favicon.png">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta property="og:title" content="Santin Automação e Tecnologia">
+<meta property="og:description" content="Projetos de automação, programação de CLP e adequação à NR-12.">
+<meta property="og:image" content="assets/simbolo-laranja.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;600;700&family=Manrope:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -78,14 +82,14 @@
   /* herói */
   .hero{overflow:hidden;padding:110px 0 120px;background:linear-gradient(135deg,var(--azul) 0%,var(--azul-escuro) 100%)}
   .hero .arcs{right:-140px;top:50%;transform:translateY(-50%);width:640px;opacity:.07}
-  .hero .dots{left:20px;bottom:36px;opacity:.5}
+  .hero > .dots{left:20px;bottom:36px;opacity:.5}
   .hero .wrap{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:56px;align-items:center}
   .hero h1{font-size:clamp(36px,5.6vw,62px);color:#fff;margin-bottom:22px}
   .hero h1 span{color:var(--laranja-2)}
   .hero p.sub{font-size:19px;color:#C9D6DB;max-width:560px;margin-bottom:34px}
   .ctas{display:flex;flex-wrap:wrap;gap:14px}
   .hero-card{position:relative;background:#fff;border-radius:24px;padding:30px;box-shadow:0 40px 80px -30px rgba(0,0,0,.55)}
-  .hero-card img.sym{width:76px;height:76px;margin-bottom:18px}
+  .hero-card img.sym{width:104px;height:104px;margin:-14px 0 6px -14px}
   .hero-card h3{font-size:22px;color:var(--azul);margin-bottom:14px}
   .checks{list-style:none;display:grid;gap:10px}
   .checks li{display:flex;gap:12px;align-items:flex-start;font-size:15.5px;color:var(--texto);font-weight:500}
@@ -153,6 +157,7 @@
   .info a,.info div{display:flex;gap:16px;align-items:center;text-decoration:none;color:#E3EBEE}
   .info .ico{width:50px;height:50px;margin:0;flex:none;box-shadow:none}
   .info .ico svg{width:24px;height:24px}
+  .info > * > span:last-child{overflow-wrap:anywhere}
   .info small{display:block;font-size:12px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;color:var(--azul-2)}
   form{background:#fff;color:var(--texto);border-radius:24px;padding:34px;box-shadow:0 30px 70px -30px rgba(0,0,0,.55)}
   form h3,.azul form h3{font-size:26px;color:var(--azul);margin-bottom:6px}
@@ -235,7 +240,7 @@
     <div class="reveal">
       <div class="hero-card">
         <div class="dots" aria-hidden="true"></div>
-        <img class="sym" src="assets/simbolo.svg" alt="" aria-hidden="true">
+        <img class="sym" src="assets/simbolo-contorno.png" alt="" aria-hidden="true">
         <h3>Um parceiro para toda a automação da sua fábrica</h3>
         <ul class="checks">
           <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><path d="m8 12 3 3 5-6"/></svg>Projetos de automação sob medida</li>
@@ -441,12 +446,12 @@
    whatsapp: só números, com 55 + DDD (ex.: 5548999998888)
    ============================================================ */
 const CONTATO = {
-  whatsapp: "[WHATSAPP]",
-  telefoneExibido: "[(DDD) 00000-0000]",
-  email: "[contato@santinautomacao.com.br]",
+  whatsapp: "5554999343297",
+  telefoneExibido: "(54) 99934-3297",
+  email: "comercial@santinmanutencoes.com.br",
   instagram: "santin.automacao",
-  endereco: "[Rua, número — Cidade/UF]",
-  horario: "[Seg. a sex., 8h às 18h]"
+  endereco: "Nestor Domingos Rizzo, 1526 – Sala 02",
+  horario: "07:15 às 11:45 · 13:10 às 17:00"
 };
 
 (function(){
@@ -456,7 +461,7 @@ const CONTATO = {
   $$(".js-wa").forEach(a => a.href = waMsg("Olá! Vim pelo site da Santin Automação e Tecnologia e gostaria de um orçamento."));
   $$(".js-phone").forEach(e => e.textContent = CONTATO.telefoneExibido);
   $$(".js-email").forEach(e => e.textContent = CONTATO.email);
-  $$(".js-mail").forEach(a => a.href = "mailto:" + CONTATO.email.replace(/[\[\]]/g,""));
+  $$(".js-mail").forEach(a => a.href = "mailto:" + CONTATO.email);
   $$(".js-insta").forEach(a => a.href = "https://instagram.com/" + CONTATO.instagram);
   $$(".js-insta-txt").forEach(e => e.textContent = "@" + CONTATO.instagram);
   $$(".js-address").forEach(e => e.textContent = CONTATO.endereco);
