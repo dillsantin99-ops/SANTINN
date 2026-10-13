@@ -41,6 +41,37 @@ const CONTATO = {
 
 O botão de WhatsApp, o formulário de orçamento, o e-mail, o Instagram, o endereço e o horário usam esses valores automaticamente.
 
+## Obras realizadas e Manutenções executadas (fotos e documentos)
+
+As duas seções são montadas automaticamente a partir de dois arquivos:
+
+| Seção | Arquivo de dados | Pasta das fotos | Pasta dos documentos |
+|---|---|---|---|
+| Obras realizadas | `dados/obras.js` | `fotos/obras/` | `documentos/obras/` |
+| Manutenções executadas | `dados/manutencoes.js` | `fotos/manutencoes/` | `documentos/manutencoes/` |
+
+Para incluir um trabalho:
+
+1. Envie as fotos (JPG, de preferência até 1600 px de largura) e os PDFs para as pastas acima.
+2. No arquivo de dados, copie o modelo que está comentado e preencha:
+
+```js
+{
+  titulo: "Automação da linha de envase",
+  cliente: "Nome do cliente",        // opcional
+  local: "Cidade/UF",                // opcional
+  data: "2026-08",                   // ano-mês
+  descricao: "Projeto, montagem do painel e programação do CLP.",
+  servicos: ["Automação", "CLP"],
+  fotos: ["fotos/obras/envase-1.jpg", "fotos/obras/envase-2.jpg"],
+  documentos: [{ nome: "Relatório técnico", arquivo: "documentos/obras/envase.pdf" }]
+},
+```
+
+A primeira foto vira a capa do cartão; clicando nela abre a galeria com todas as fotos. Enquanto não houver nenhum item, a seção mostra um aviso de "em breve".
+
+> Atenção: tudo que for publicado no site fica público. Antes de subir laudos, ARTs ou relatórios, confira se o cliente autoriza e remova dados sensíveis.
+
 ## Publicar com GitHub Pages (grátis)
 
 1. No GitHub, abra o repositório → **Settings** → **Pages**.
@@ -54,6 +85,7 @@ Para usar um domínio próprio (ex.: `santinautomacao.com.br`), informe-o no cam
 
 - Topo com logotipo horizontal e menu
 - Herói: "Automatize sua produção com um processo confiável e seguro"
+- Obras realizadas e Manutenções executadas, com galeria de fotos e documentos
 - Serviços: projetos de automação, programação de CLP, NR-12, automação e controle, equipamentos e máquinas, manutenção e instalações
 - Destaque NR-12: projeto, montagem e instalação
 - Segurança: treinamentos NR-10, NR-35, NR-33 e NR-18 (PTA)
