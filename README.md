@@ -1,8 +1,28 @@
-# SANTIN AUTOMAÇÃO LTDA — Site institucional
+# Santin Automação e Tecnologia — Site institucional
 
-Site de página única da SANTIN AUTOMAÇÃO LTDA (CNPJ 10.703.586/0001-04): manutenção elétrica, manutenção mecânica, automação industrial e instalações elétricas.
+Site de página única da SANTIN AUTOMAÇÃO LTDA (CNPJ 10.703.586/0001-04), seguindo o **Manual de Identidade Visual Santin**.
 
-Tudo está em um único arquivo: `index.html` (HTML + CSS + JavaScript, sem dependências).
+- `index.html` — o site completo (HTML + CSS + JavaScript, sem dependências)
+- `assets/` — logotipos oficiais em SVG (vetor), extraídos do manual
+
+## Identidade visual aplicada
+
+| Elemento | Valor |
+|---|---|
+| Laranja (principal) | `#E26534` · RGB 226 101 52 · Pantone 7579 C |
+| Laranja tons | `#EEA385`, `#F9E0D6` |
+| Azul (principal) | `#365A68` · RGB 54 90 104 · Pantone 4161 C |
+| Azul tons | `#8198A0`, `#CDD6D9` |
+| Títulos | Comfortaa (Google Fonts) |
+| Textos | Manrope (Google Fonts) |
+
+Logotipos em `assets/`:
+
+- `logo-horizontal.svg` (topo do site)
+- `logo-principal.svg`
+- `logo-sem-simbolo.svg`
+- `simbolo.svg` (ícone da aba)
+- versões `-branco.svg` de cada um, para fundos escuros
 
 ## Antes de publicar: preencha os dados de contato
 
@@ -13,11 +33,13 @@ const CONTATO = {
   whatsapp: "5548999998888",              // só números: 55 + DDD + número
   telefoneExibido: "(48) 99999-8888",
   email: "contato@seudominio.com.br",
-  endereco: "Rua Exemplo, 123 — Cidade/UF"
+  instagram: "santin.automacao",
+  endereco: "Rua Exemplo, 123 — Cidade/UF",
+  horario: "Seg. a sex., 8h às 18h"
 };
 ```
 
-O botão de WhatsApp, o formulário de orçamento, o e-mail e o endereço usam esses valores automaticamente.
+O botão de WhatsApp, o formulário de orçamento, o e-mail, o Instagram, o endereço e o horário usam esses valores automaticamente.
 
 ## Publicar com GitHub Pages (grátis)
 
@@ -30,11 +52,11 @@ Para usar um domínio próprio (ex.: `santinautomacao.com.br`), informe-o no cam
 
 ## O que tem no site
 
-- Topo com menu e botão de orçamento
-- Herói com chamada principal e WhatsApp
-- Serviços: elétrica, mecânica, automação e instalações
+- Topo com logotipo horizontal e menu
+- Herói: "Automatize sua produção com um processo confiável e seguro"
+- Serviços: projetos de automação, programação de CLP, NR-12, automação e controle, equipamentos e máquinas, manutenção e instalações
+- Destaque NR-12: projeto, montagem e instalação
 - Segurança: treinamentos NR-10, NR-35, NR-33 e NR-18 (PTA)
 - Como trabalhamos (4 etapas)
-- Formas de atendimento: preventiva, corretiva e projetos
 - Contato com formulário que abre a mensagem pronta no WhatsApp
 - Botão flutuante de WhatsApp
