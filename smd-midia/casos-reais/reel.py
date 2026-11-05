@@ -81,7 +81,7 @@ lst = TMP / "list.txt"; lst.write_text("".join(f"file '{s}'\n" for s in segs))
 silent = TMP / "silent.mp4"
 run(["ffmpeg", "-y", "-f", "concat", "-safe", "0", "-i", str(lst), "-c", "copy", str(silent)])
 # trilha: som ambiente real do teste das correias, baixo, com fade (Instagram exige faixa de áudio)
-out = BASE / "reel_exaustor.mp4"
+out = BASE / "reel_exaustor_sem_musica.mp4"
 run(["ffmpeg", "-y", "-i", str(silent), "-ss", "5", "-i", str(VID / "Correias trocadas, teste de ruido e alinhamento.mp4"),
      "-filter_complex", "[1:a]volume=0.6,afade=t=in:d=1,afade=t=out:st=21:d=2[a]", "-map", "0:v", "-map", "[a]",
      "-shortest", "-c:v", "copy", "-c:a", "aac", "-b:a", "128k", "-movflags", "+faststart", str(out)])
