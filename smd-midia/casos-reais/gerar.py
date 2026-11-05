@@ -109,6 +109,23 @@ POSTS = {
  ],
 }
 
+POSTS["c5"] = [  # Preventiva completa exaustor 004 (descrição do técnico)
+   cover("ex_rotor_limpo.jpg", "Preventiva completa", "exaustor de cabine, passo a passo"),
+   collage("Rotor sujo", "perde ar e vibra", G2x2, [
+     ("ex_rotor_sujo.jpg", "Antes: rotor sujo", "", ""), ("ex_rotor_limpo.jpg", "Depois: limpo", "ok", ""),
+     ("ex_motor1.jpg", "Motor limpo", "ok", ""), ("ex_rotor_graxa.jpg", "Graxa aplicada no rotor", "ok", "")]),
+   collage("Mancais abertos,", "rolamento conferido", G2x2, [
+     ("ex_mancal_aberto.jpg", "Mancal aberto", "", ""), ("ex_lub2.jpg", "Lubrificação", "ok", ""),
+     ("ex_lub1.jpg", "Mancais e eixos", "ok", ""), ("ex_temp_mancal.jpg", "Temperatura do mancal", "", "")]),
+   collage("Correias e motor", "medidos e anotados", G2x2, [
+     ("ex_correia_velha.jpg", "Correias a trocar", "", ""), ("ex_correia_nova.jpg", "4 correias B80 novas", "ok", ""),
+     ("ex_temp_motor.jpg", "Temperatura do motor", "", ""), ("ex_motor2.jpg", "Motor avaliado", "ok", "")]),
+   lista("Exaustor de cabine", ["Limpeza do rotor e aplicação de graxa", "Mancais abertos, rolamentos conferidos e lubrificados",
+        "Motores limpos, com ruído, vibração e folgas avaliados", "Corrente medida e comparada com a nominal na OS",
+        "Troca das 4 correias B80, alinhamento e teste de ruído"],
+        "Conexões, conduítes e calhas elétricas verificados e reparados. Tudo registrado na ordem de serviço."),
+]
+
 if __name__ == "__main__":
     with sync_playwright() as p:
         b = p.chromium.launch()
